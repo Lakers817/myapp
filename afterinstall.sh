@@ -2,7 +2,7 @@
 
 
 
-python test.py
+ cd /home/ubuntu/code
  
 
 
