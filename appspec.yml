@@ -13,6 +13,6 @@ hooks:
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: /home/ubuntu/code/apache_start.sh
+    - location: apache_start.sh
       timeout: 300
       runas: root
