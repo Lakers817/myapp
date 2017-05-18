@@ -9,10 +9,10 @@ hooks:
       timeout: 300
       runas: root
   AfterInstall:
-    - location: afterinstall.sh
+    - location: /home/ubuntu/code/afterinstall.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: apache_start.sh
+    - location: /home/ubuntu/code/apache_start.sh
       timeout: 300
       runas: root
