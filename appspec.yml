@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /home/ubuntu/code
+  - source: /index.html
+    destination: /var/www/html/
 hooks:
   BeforeInstall:
     - location: apache_stop.sh
