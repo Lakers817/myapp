@@ -1,18 +1,21 @@
 version: 0.0
 os: linux
+
 files:
-  - source: /index.html
-    destination: /var/www/html/
+  - source: files/index.html
+    destination: /var/www/html
+
+permissions:
+  - object: /var/www/html
+    pattern: index.html
+    mode: 755
+    type:
+      - file
+
 hooks:
   BeforeInstall:
-    - location: apache_stop.sh
-      timeout: 300
-      runas: root
+    - location: scripts/webserver-stop.sh
+    - location: scripts/delete-old-index.sh
   AfterInstall:
-    - location: afterinstall.sh
-      timeout: 300
-      runas: root
-  ApplicationStart:
-    - location: apache_start.sh
-      timeout: 300
-      runas: root
+    - location: scripts/sleep.sh
+    - location: scripts/webserver-start.sh
