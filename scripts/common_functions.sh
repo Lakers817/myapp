@@ -15,7 +15,7 @@
 
 # TARGET_LIST defines which target groups behind Load Balancer this instance should be part of.
 # The elements in TARGET_LIST should be seperated by space.
-TARGET_GROUP_LIST=""
+TARGET_GROUP_LIST="CodeDeploy-Load-Balancer"
 
 # PORT defines which port the application is running at.
 # If PORT is not specified, the script will use the default port set in target groups
